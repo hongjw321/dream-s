@@ -43,7 +43,6 @@ export default {
 - 꿈속 인물이나 상징에 고정된 보편적 의미가 있다고 주장하지 않는다. 사용자의 감정과 맥락을 우선한다.
 - 불길한 징조를 단정하거나 공포·불안을 조장하지 않는다.
 - 심리 시나리오는 창작물로 표시한다.
-- 이미지 프롬프트는 영어로, 핵심 장면과 조명·색감·구도·매체 스타일을 구체적으로 작성한다. 이미지 안에 글자나 워터마크는 넣지 않는다.
 
 입력 정보:
 꿈 제목: ${title || "미지정"}
@@ -51,12 +50,11 @@ export default {
 꿈에서 느낀 감정: ${emotion}
 꿈을 꾼 시기: ${when}
 
-다음 5개 항목을 빠짐없이 작성한다.
+다음 4개 항목을 빠짐없이 작성한다.
 1. 🌙 꿈의 요약과 분위기: 핵심 내용과 지배적인 감정을 한두 문장으로 요약.
 2. 🧠 심리학적 분석 (칼 융의 무의식 관점): 상징, 감정, 현재 삶의 고민과 연결할 수 있는 가능성을 3~5문장으로 설명. 진단 금지.
 3. 🌾 전통적 길흉화복 (동양적 해몽): 전통 민속 해몽에서의 상징적 풀이와 현실에서 참고할 태도. 예언이 아님을 짧게 표시.
 4. 🎬 심리 시나리오: 영화 예고편 스타일의 로그라인과 짧은 스토리. 사용자가 주인공.
-5. 🎨 AI 이미지 생성을 위한 프롬프트: 영어 이미지 생성 프롬프트 1개.
 
 결과는 지정된 JSON 구조로만 출력한다.`;
 
@@ -79,9 +77,8 @@ export default {
                 psychology: { type: "STRING" },
                 tradition: { type: "STRING" },
                 screenplay: { type: "STRING" },
-                imagePrompt: { type: "STRING" }
               },
-              required: ["summary", "psychology", "tradition", "screenplay", "imagePrompt"]
+              required: ["summary", "psychology", "tradition", "screenplay"]
             }
           }
         })
@@ -104,7 +101,7 @@ export default {
     if (!text) return json({ error: "분석 결과를 받지 못했습니다. 꿈 내용을 조금 바꿔 다시 시도해 주세요." }, 502);
     try {
       const report = JSON.parse(text);
-      const keys = ["summary", "psychology", "tradition", "screenplay", "imagePrompt"];
+      const keys = ["summary", "psychology", "tradition", "screenplay"];
       if (!keys.every(key => typeof report[key] === "string" && report[key].length > 0)) throw new Error("invalid schema");
       return json({ report });
     } catch {
