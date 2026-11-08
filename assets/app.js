@@ -64,7 +64,6 @@ function renderReport(container, report) {
     ["02", "🧠 심리학적 분석", report.psychology],
     ["03", "🌾 전통적 길흉화복", report.tradition],
     ["04", "🎬 심리 시나리오", report.screenplay],
-    ["05", "🎨 AI 이미지 생성 프롬프트", report.imagePrompt]
   ];
   container.innerHTML = "";
   const heading = document.createElement("div");
@@ -85,21 +84,6 @@ function renderReport(container, report) {
     const p = document.createElement("p");
     p.textContent = content;
     article.append(h3, p);
-    if (number === "05") {
-      const copy = document.createElement("button");
-      copy.className = "copy-prompt";
-      copy.type = "button";
-      copy.textContent = "영문 프롬프트 복사";
-      copy.addEventListener("click", async () => {
-        try {
-          await navigator.clipboard.writeText(content);
-          copy.textContent = "복사 완료 ✓";
-        } catch {
-          copy.textContent = "복사할 수 없습니다";
-        }
-      });
-      article.append(copy);
-    }
     container.append(article);
   });
   const disclaimer = document.createElement("p");
