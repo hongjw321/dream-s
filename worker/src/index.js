@@ -1,5 +1,5 @@
 const ALLOWED_ORIGIN = "https://hongjw321.github.io";
-const MODEL = "gemini-2.5-flash-lite";
+const MODEL = "gemini-3.1-flash-lite";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
