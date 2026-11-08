@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const form=document.querySelector("#birth-form");if(form){form.addEventListener("submit",e=>{e.preventDefault();if(!form.reportValidity())return;const data=new FormData(form);sessionStorage.setItem("demoReportName",String(data.get("name")||"고객"));alert("입력 정보가 확인되었습니다. 현재는 시제품으로 실제 사주 분석이나 결제는 연결되지 않았습니다.");});}});
