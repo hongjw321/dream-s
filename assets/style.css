@@ -53,3 +53,54 @@ nav{color:#d2cada}.nav-cta{border-color:#bda66f;color:#f2e5c6}.nav-cta:hover{bac
 .form-heading{color:#756a7b;border-color:#d8cdbb}form label{color:#62586a}input,select{background:#fffdf8;border-color:#d8cdbb;color:#28243a}input:focus,select:focus{border-color:#a88b51;box-shadow:0 0 0 2px #d7b66d44}.consent{color:#6e6575!important}.consent input{accent-color:#9d8048}.submit-btn{background:linear-gradient(100deg,#28213c,#40304e);color:#f7edda}.submit-btn:hover{background:#705b3e}.note{color:#82788a}
 footer{background:#090d1d;border-top:1px solid #39334c;color:#e9dfcf}footer p{color:#c0b7c8}footer small{color:#968da7}.footer-disclaimer{border-color:#ffffff20;color:#90879e}
 @media(max-width:520px){.visual:before{width:275px;height:275px}.orbit-a{width:310px}.orbit-b{width:260px}.orbit-c{height:300px}.hero{background:transparent}.service-card{min-height:320px}}
+
+
+/* Animated saju & tarot hero illustration */
+.visual{isolation:isolate}
+.visual:before{animation:cosmic-pulse 7s ease-in-out infinite}
+.orbit-a{animation:orbit-drift 24s linear infinite}
+.orbit-b{animation:orbit-drift 32s linear infinite reverse}
+.orbit-c{animation:orbit-drift 42s linear infinite}
+.planet{animation:planet-float 5s ease-in-out infinite}
+.p2{animation-delay:-1.8s}.p3{animation-delay:-3.1s}
+.core{animation:core-glow 5s ease-in-out infinite}
+.zodiac-wheel{position:absolute;width:440px;height:440px;border:1px solid #d7b66d35;border-radius:50%;z-index:0;animation:orbit-drift 90s linear infinite}
+.zodiac-wheel:before,.zodiac-wheel:after{content:"";position:absolute;inset:22px;border:1px dashed #c6a8dc55;border-radius:50%}
+.zodiac-wheel:after{inset:72px;border-style:solid;border-color:#d7b66d28}
+.zodiac-wheel span{position:absolute;left:50%;top:50%;width:24px;height:24px;margin:-12px;color:#e6d3a7;font:16px serif;text-align:center;text-shadow:0 0 12px #d7b66d88}
+.zodiac-wheel span:nth-child(1){transform:rotate(0deg) translateY(-210px) rotate(0deg)}
+.zodiac-wheel span:nth-child(2){transform:rotate(30deg) translateY(-210px) rotate(-30deg)}
+.zodiac-wheel span:nth-child(3){transform:rotate(60deg) translateY(-210px) rotate(-60deg)}
+.zodiac-wheel span:nth-child(4){transform:rotate(90deg) translateY(-210px) rotate(-90deg)}
+.zodiac-wheel span:nth-child(5){transform:rotate(120deg) translateY(-210px) rotate(-120deg)}
+.zodiac-wheel span:nth-child(6){transform:rotate(150deg) translateY(-210px) rotate(-150deg)}
+.zodiac-wheel span:nth-child(7){transform:rotate(180deg) translateY(-210px) rotate(-180deg)}
+.zodiac-wheel span:nth-child(8){transform:rotate(210deg) translateY(-210px) rotate(-210deg)}
+.zodiac-wheel span:nth-child(9){transform:rotate(240deg) translateY(-210px) rotate(-240deg)}
+.zodiac-wheel span:nth-child(10){transform:rotate(270deg) translateY(-210px) rotate(-270deg)}
+.zodiac-wheel span:nth-child(11){transform:rotate(300deg) translateY(-210px) rotate(-300deg)}
+.zodiac-wheel span:nth-child(12){transform:rotate(330deg) translateY(-210px) rotate(-330deg)}
+.moon-art{position:absolute;z-index:2;right:17%;top:12%;width:75px;height:75px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#fff5d8,#d8c18e 52%,#8e7d65);box-shadow:0 0 22px #e9d5a566,0 0 65px #d7b66d33;animation:moon-float 8s ease-in-out infinite}
+.moon-art span{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 68% 38%,#22203a 0 42%,transparent 44%);transform:translate(13px,-5px)}
+.floating-tarot{position:absolute;z-index:4;width:76px;height:126px;padding:9px 8px;border:1px solid #dfc88e;background:linear-gradient(145deg,#514367,#211d37 70%);box-shadow:0 8px 25px #05071466,inset 0 0 0 3px #d7b66d22;color:#f2e4c5;display:flex;flex-direction:column;justify-content:space-between;align-items:center}
+.floating-tarot:before{content:"";position:absolute;inset:5px;border:1px solid #d7b66d55;pointer-events:none}
+.floating-tarot small,.floating-tarot span{font:7px var(--mono);letter-spacing:.08em}
+.floating-tarot b{font:36px/1 serif;color:#e5cb8e;text-shadow:0 0 16px #e4c98577}
+.tarot-left{left:8%;top:23%;transform:rotate(-13deg);animation:tarot-left-float 7s ease-in-out infinite}
+.tarot-right{right:8%;bottom:19%;transform:rotate(12deg);animation:tarot-right-float 8s ease-in-out infinite}
+.element-ring{position:absolute;z-index:3;width:205px;height:205px;border:1px solid #d7b66d35;border-radius:50%;animation:orbit-drift 28s linear infinite reverse}
+.element-ring i{position:absolute;left:50%;top:50%;font:14px 'Noto Sans KR';font-style:normal;color:#e5c987;text-shadow:0 0 10px #d7b66d88}
+.element-ring i:nth-child(1){transform:translate(-50%,-105px)}
+.element-ring i:nth-child(2){transform:translate(78px,-50%)}
+.element-ring i:nth-child(3){transform:translate(-50%,88px)}
+.element-ring i:nth-child(4){transform:translate(-98px,-50%)}
+.element-ring i:nth-child(5){transform:translate(-50%,-50%);color:#c7a9df}
+@keyframes orbit-drift{from{rotate:0deg}to{rotate:360deg}}
+@keyframes planet-float{0%,100%{translate:0 0}50%{translate:0 -13px}}
+@keyframes moon-float{0%,100%{translate:0 0}50%{translate:-8px -12px}}
+@keyframes tarot-left-float{0%,100%{translate:0 0;rotate:-3deg}50%{translate:0 -17px;rotate:2deg}}
+@keyframes tarot-right-float{0%,100%{translate:0 0;rotate:3deg}50%{translate:0 14px;rotate:-2deg}}
+@keyframes cosmic-pulse{0%,100%{filter:brightness(.88);scale:1}50%{filter:brightness(1.16);scale:1.035}}
+@keyframes core-glow{0%,100%{box-shadow:0 0 0 13px #d7b66d0d,0 0 0 27px #d7b66d08,0 0 45px #9c82d544}50%{box-shadow:0 0 0 18px #d7b66d12,0 0 0 36px #d7b66d0b,0 0 70px #b39bd377}}
+@media(max-width:520px){.zodiac-wheel{width:310px;height:310px}.zodiac-wheel span:nth-child(n){transform:translateY(-145px)}.moon-art{width:55px;height:55px;right:13%;top:10%}.floating-tarot{width:58px;height:98px}.tarot-left{left:2%;top:19%}.tarot-right{right:2%;bottom:15%}.floating-tarot b{font-size:28px}.element-ring{width:155px;height:155px}.element-ring i:nth-child(1){transform:translate(-50%,-80px)}.element-ring i:nth-child(2){transform:translate(55px,-50%)}.element-ring i:nth-child(3){transform:translate(-50%,63px)}.element-ring i:nth-child(4){transform:translate(-75px,-50%)}}
+@media(prefers-reduced-motion:reduce){.visual *, .visual:before{animation:none!important}}
