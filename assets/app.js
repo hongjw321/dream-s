@@ -1,5 +1,5 @@
 // Cloudflare Worker 배포 후 아래 주소를 본인의 workers.dev 주소로 변경하세요.
-const DREAM_API_URL = "";
+const DREAM_API_URL = "https://dream-s-api.hongjw321.workers.dev/";
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#dream-form");
