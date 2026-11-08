@@ -5,7 +5,7 @@
 
 /* A-IN mystical observatory art direction */
 :root{--paper:#0b1022;--ink:#f1eadc;--muted:#b0abc0;--line:#37344d;--acid:#d7b66d;--violet:#a99ad4;--orange:#d99a78}
-body{background:#0b1022;color:#f1eadc}
+body{background-color:#0b1022;background-image:radial-gradient(1px 1px at 8% 14%,#fff 98%,transparent),radial-gradient(1px 1px at 18% 68%,#d9c58f 98%,transparent),radial-gradient(2px 2px at 31% 27%,#fff 98%,transparent),radial-gradient(1px 1px at 42% 82%,#fff 98%,transparent),radial-gradient(1px 1px at 58% 13%,#d9c58f 98%,transparent),radial-gradient(2px 2px at 73% 36%,#fff 98%,transparent),radial-gradient(1px 1px at 84% 76%,#fff 98%,transparent),radial-gradient(1px 1px at 94% 22%,#d9c58f 98%,transparent),radial-gradient(ellipse at 50% 8%,rgba(74,65,119,.38),transparent 42%),radial-gradient(ellipse at 88% 46%,rgba(71,47,91,.22),transparent 34%),linear-gradient(180deg,#0b1022,#111329 55%,#0b1022);background-size:173px 191px,239px 227px,307px 283px,211px 251px,271px 223px,331px 307px,193px 269px,293px 211px,auto,auto,auto;color:#f1eadc}
 body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:
 radial-gradient(ellipse at 50% 8%,rgba(74,65,119,.38),transparent 42%),
 radial-gradient(ellipse at 88% 46%,rgba(71,47,91,.22),transparent 34%),
