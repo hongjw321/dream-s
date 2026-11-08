@@ -22,7 +22,7 @@
 1. 저장소 Settings → Pages로 이동합니다.
 2. Source를 Deploy from a branch로 설정합니다.
 3. Branch는 main, Folder는 /(root)를 선택하고 Save를 누릅니다.
-4. 배포 완료 후 https://hongjw321.github.io/saju-taro/ 에서 확인합니다.
+4. 배포 완료 후 https://hongjw321.github.io/dream-s/ 에서 확인합니다.
 
 ## 주의: 시제품 단계
 현재는 프론트엔드 화면과 입력 폼만 구현되어 있습니다. 실제 AI 꿈 분석, AI 이미지 생성, 회원가입, 꿈 기록 저장, 결제 및 PDF 생성은 아직 연결되지 않았습니다. 입력한 꿈 내용은 현재 브라우저 sessionStorage에 임시 초안으로 저장됩니다.
